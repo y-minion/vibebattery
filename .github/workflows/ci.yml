@@ -7,6 +7,8 @@ jobs:
     runs-on: macos-15
     steps:
       - uses: actions/checkout@v4
+      - name: Show Xcode version
+        run: xcodebuild -version
       - name: Test policies and stores
         run: swift test --disable-xctest
       - name: Smoke test scoped terminal sessions

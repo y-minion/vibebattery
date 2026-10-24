@@ -57,7 +57,7 @@ struct SettingsView:View {
                 ForEach(["vbctl charge set 70","vbctl charge topup","vbctl charge status --json"],id:\.self) { Text($0).font(.system(.callout,design:.monospaced)).textSelection(.enabled) }
             }
             Button("vbctl 경로 복사") { model.copyText(Bundle.main.bundleURL.appendingPathComponent("Contents/MacOS/vbctl").path) }
-            Text("단축어 앱의 '셸 스크립트 실행'에 위 명령을 넣어 쓸 수 있습니다.").font(.caption).foregroundStyle(.secondary)
+            Text("단축어 앱에서 'VibeBattery'를 검색하면 전용 동작을 쓸 수 있습니다. 셸 스크립트 실행에 vbctl 명령을 넣어도 됩니다.").font(.caption).foregroundStyle(.secondary)
         }
         Card {
             Text("시작과 에너지 모드").font(.headline)

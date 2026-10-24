@@ -3,7 +3,7 @@ import AppKit
 import BatteryCore
 import BatteryPlatform
 @main struct VibeBatteryApp: App {
-    @StateObject private var model=AppModel()
+    @StateObject private var model=AppModel.shared
     @NSApplicationDelegateAdaptor(AppDelegate.self) private var delegate
     var body:some Scene {
         WindowGroup("VibeBattery",id:"main") { RootView().environmentObject(model).frame(minWidth:900,minHeight:650).tint(.mint) }

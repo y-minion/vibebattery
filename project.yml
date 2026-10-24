@@ -1,0 +1,77 @@
+# Generates VibeBattery.xcodeproj (committed). After editing, run: xcodegen generate
+name: VibeBattery
+options:
+  deploymentTarget: { macOS: "15.0" }
+  projectFormat: xcode16_0
+  createIntermediateGroups: true
+packages:
+  VibeBatteryKit: { path: . }
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    MACOSX_DEPLOYMENT_TARGET: "15.0"
+    CODE_SIGN_IDENTITY: "-"
+    CODE_SIGN_STYLE: Manual
+    DEVELOPMENT_TEAM: ""
+    ENABLE_HARDENED_RUNTIME: NO
+    MARKETING_VERSION: 0.1.0
+    CURRENT_PROJECT_VERSION: "1"
+targets:
+  # Named apart from the package's VibeBattery executable so the scheme builds the app bundle.
+  VibeBatteryApp:
+    type: application
+    platform: macOS
+    scheme: {}
+    sources:
+      - path: Sources/VibeBattery
+      - path: scripts/install-helper.sh
+        buildPhase: resources
+      - path: scripts/uninstall-helper.sh
+        buildPhase: resources
+    dependencies:
+      - { package: VibeBatteryKit, product: BatteryCore }
+      - { package: VibeBatteryKit, product: BatteryPlatform }
+      - { target: vbctl, embed: true, copy: { destination: executables } }
+      - { target: VBChargeHelper, embed: true, copy: { destination: executables } }
+    info:
+      path: Resources/Info.plist
+      properties:
+        CFBundleName: VibeBattery
+        CFBundleDisplayName: VibeBattery
+        CFBundleExecutable: $(EXECUTABLE_NAME)
+        CFBundleIdentifier: $(PRODUCT_BUNDLE_IDENTIFIER)
+        CFBundlePackageType: APPL
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        LSMinimumSystemVersion: $(MACOSX_DEPLOYMENT_TARGET)
+        NSHighResolutionCapable: true
+    settings:
+      base:
+        PRODUCT_NAME: VibeBattery
+        PRODUCT_BUNDLE_IDENTIFIER: io.github.y-minion.vibebattery
+        ENABLE_APP_SANDBOX: NO
+  vbctl:
+    type: tool
+    platform: macOS
+    sources: [Sources/VibeCLI]
+    dependencies:
+      - { package: VibeBatteryKit, product: BatteryCore }
+      - { package: VibeBatteryKit, product: BatteryPlatform }
+      - { package: VibeBatteryKit, product: MacBridge }
+    settings:
+      base:
+        PRODUCT_NAME: vbctl
+        PRODUCT_BUNDLE_IDENTIFIER: io.github.y-minion.vibebattery.vbctl
+  VBChargeHelper:
+    type: tool
+    platform: macOS
+    sources: [Sources/VBChargeHelper]
+    dependencies:
+      - { package: VibeBatteryKit, product: BatteryCore }
+      - { package: VibeBatteryKit, product: BatteryPlatform }
+      - { package: VibeBatteryKit, product: MacBridge }
+      - { sdk: SystemConfiguration.framework }
+    settings:
+      base:
+        PRODUCT_NAME: VBChargeHelper
+        PRODUCT_BUNDLE_IDENTIFIER: io.github.y-minion.vibebattery.helper

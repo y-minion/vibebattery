@@ -1,0 +1,713 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02C3A468AD308533B7CC6A4F /* uninstall-helper.sh in Resources */ = {isa = PBXBuildFile; fileRef = E1F675D2F345E31B5B9B9C56 /* uninstall-helper.sh */; };
+		09B6A926C8358BCAF4257D62 /* install-helper.sh in Resources */ = {isa = PBXBuildFile; fileRef = C44FE5D78379B6CB8BAF4402 /* install-helper.sh */; };
+		0A27D4A05133537F9957C8D6 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D643A01B5C56616360E82B /* DashboardView.swift */; };
+		1A53EE2D512E53484C77EFBA /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3315A191359FEBF720F72706 /* AppModel.swift */; };
+		1B989C71F81739E96BAF9E1D /* SessionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CEF701FD15671F19F52B58 /* SessionsView.swift */; };
+		270EE45B4BA311DDA7D897FD /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9A9BD4128EBDCC34F4EDC5 /* App.swift */; };
+		46FE2D87BBA577B293C47118 /* SessionRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B88B180D71C8B5B11E84C3 /* SessionRunner.swift */; };
+		4BF83CC5E31D6E323CE4AA67 /* VBChargeHelper in Embed Dependencies */ = {isa = PBXBuildFile; fileRef = 582B35FC88C983331FA3E54B /* VBChargeHelper */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5597993BA10B64959DE1CD47 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B1ACBB0CFFCD6463701837 /* Main.swift */; };
+		614932E0AE1873D851DF2807 /* ProcessesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD95128FE5024E3262D7B55B /* ProcessesView.swift */; };
+		6B0CBDB6427FDC01CA52E0F7 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADE431B8D94C975301BF43C /* main.swift */; };
+		7D50C5F89ADBB93CD17D1C4A /* ChargeControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28234EBE31B5A4B8CCE662B /* ChargeControlView.swift */; };
+		8C4B0290C57DB307EB2C1971 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB430FC51271837AC63BECF4 /* SettingsView.swift */; };
+		9331556D82D858C5CACDB836 /* ChargeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69238EE300AEAC6E22ED6727 /* ChargeView.swift */; };
+		A002AB0CD85465A4916413FD /* ChargeIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A020FDCB309E18A24DC8273 /* ChargeIntents.swift */; };
+		A02A15628471797568E82F6B /* ChildCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5647D6A28B0D5FA1C64B04 /* ChildCommand.swift */; };
+		A6865023CDDD3ED0AFCE6805 /* BatteryPlatform in Frameworks */ = {isa = PBXBuildFile; productRef = 096866D6B92443C5CB23E175 /* BatteryPlatform */; };
+		A6F34A4460456E43207CB21E /* BatteryCore in Frameworks */ = {isa = PBXBuildFile; productRef = 91721846BF0F00D782E2AD9E /* BatteryCore */; };
+		B934224508EE5C07C262BA54 /* BatteryPlatform in Frameworks */ = {isa = PBXBuildFile; productRef = FBC1A1DC8559E38387C4D01D /* BatteryPlatform */; };
+		C7C02E43FDFCEDD560F4F50A /* Notifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD850D5EAC9A9681D4F3103 /* Notifier.swift */; };
+		CF2F501713E443531AFE84C9 /* BatteryCore in Frameworks */ = {isa = PBXBuildFile; productRef = 33E14DA60A9D100A6EB8F8C6 /* BatteryCore */; };
+		DE11E10BDB1CC4A3BB873CD6 /* HealthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEC7CC828570B37A896E19C /* HealthView.swift */; };
+		DF3A1B69639E546BBB60288B /* ResourceRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC1DBF4662D8142BEE1442 /* ResourceRunner.swift */; };
+		E1D09EBC38FF2B57463A5339 /* MacBridge in Frameworks */ = {isa = PBXBuildFile; productRef = B0F5B6A27A0FD7A454BBC7E2 /* MacBridge */; };
+		E248890EF7221EFB57C43A75 /* BatteryPlatform in Frameworks */ = {isa = PBXBuildFile; productRef = 64490999888D4D3BABB5223F /* BatteryPlatform */; };
+		E6BB2E74B7FE8367D78503DF /* vbctl in Embed Dependencies */ = {isa = PBXBuildFile; fileRef = 289196878332C8951082FB3F /* vbctl */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		EE6C5BA4A1238323AC43515C /* BatteryCore in Frameworks */ = {isa = PBXBuildFile; productRef = 295390D169B4E0D0F293CF3B /* BatteryCore */; };
+		F40CD6429DA3CE41E87AC568 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C620400A3E7FF15B0A4926D7 /* SystemConfiguration.framework */; };
+		FD3429ECF797DE94E459A6A7 /* MacBridge in Frameworks */ = {isa = PBXBuildFile; productRef = C4D8B20BA79F12B2D2CE1BFC /* MacBridge */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A687E784C99BCF59A5A925C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BD4C292459EBF759E38606D0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 06F2618B09A06A733B798666;
+			remoteInfo = vbctl;
+		};
+		CED96D5837395EE4FCF1A35B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BD4C292459EBF759E38606D0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F070D204D9F5AFB29A38E4B;
+			remoteInfo = VBChargeHelper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5B84B990E0D0629844ACE384 /* Embed Dependencies */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				E6BB2E74B7FE8367D78503DF /* vbctl in Embed Dependencies */,
+				4BF83CC5E31D6E323CE4AA67 /* VBChargeHelper in Embed Dependencies */,
+			);
+			name = "Embed Dependencies";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		04CC1DBF4662D8142BEE1442 /* ResourceRunner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceRunner.swift; sourceTree = "<group>"; };
+		0A020FDCB309E18A24DC8273 /* ChargeIntents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeIntents.swift; sourceTree = "<group>"; };
+		1B86C12E613BAA11B444A475 /* VibeBatteryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VibeBatteryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		289196878332C8951082FB3F /* vbctl */ = {isa = PBXFileReference; includeInIndex = 0; path = vbctl; sourceTree = BUILT_PRODUCTS_DIR; };
+		3315A191359FEBF720F72706 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		38B88B180D71C8B5B11E84C3 /* SessionRunner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionRunner.swift; sourceTree = "<group>"; };
+		45B1ACBB0CFFCD6463701837 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		49D643A01B5C56616360E82B /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		4ADE431B8D94C975301BF43C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		582B35FC88C983331FA3E54B /* VBChargeHelper */ = {isa = PBXFileReference; includeInIndex = 0; path = VBChargeHelper; sourceTree = BUILT_PRODUCTS_DIR; };
+		69238EE300AEAC6E22ED6727 /* ChargeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeView.swift; sourceTree = "<group>"; };
+		7E5647D6A28B0D5FA1C64B04 /* ChildCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildCommand.swift; sourceTree = "<group>"; };
+		7FEC7CC828570B37A896E19C /* HealthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthView.swift; sourceTree = "<group>"; };
+		B2CEF701FD15671F19F52B58 /* SessionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsView.swift; sourceTree = "<group>"; };
+		B35434FE6441A6B8C8843C5A /* VibeBattery */ = {isa = PBXFileReference; lastKnownFileType = folder; name = VibeBattery; path = .; sourceTree = SOURCE_ROOT; };
+		BD9A9BD4128EBDCC34F4EDC5 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		C44FE5D78379B6CB8BAF4402 /* install-helper.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "install-helper.sh"; sourceTree = "<group>"; };
+		C620400A3E7FF15B0A4926D7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D28234EBE31B5A4B8CCE662B /* ChargeControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeControlView.swift; sourceTree = "<group>"; };
+		DD95128FE5024E3262D7B55B /* ProcessesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessesView.swift; sourceTree = "<group>"; };
+		E1F675D2F345E31B5B9B9C56 /* uninstall-helper.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "uninstall-helper.sh"; sourceTree = "<group>"; };
+		FB430FC51271837AC63BECF4 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		FDD850D5EAC9A9681D4F3103 /* Notifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifier.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3AE57A5E10BE5495F471C69B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF2F501713E443531AFE84C9 /* BatteryCore in Frameworks */,
+				E248890EF7221EFB57C43A75 /* BatteryPlatform in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D31A0F86AED22F8BEA9854E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE6C5BA4A1238323AC43515C /* BatteryCore in Frameworks */,
+				A6865023CDDD3ED0AFCE6805 /* BatteryPlatform in Frameworks */,
+				E1D09EBC38FF2B57463A5339 /* MacBridge in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6E07A47645374091D353741 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6F34A4460456E43207CB21E /* BatteryCore in Frameworks */,
+				B934224508EE5C07C262BA54 /* BatteryPlatform in Frameworks */,
+				FD3429ECF797DE94E459A6A7 /* MacBridge in Frameworks */,
+				F40CD6429DA3CE41E87AC568 /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		15F1AE37973735A7B51DEA10 /* VibeBattery */ = {
+			isa = PBXGroup;
+			children = (
+				BD9A9BD4128EBDCC34F4EDC5 /* App.swift */,
+				3315A191359FEBF720F72706 /* AppModel.swift */,
+				D28234EBE31B5A4B8CCE662B /* ChargeControlView.swift */,
+				0A020FDCB309E18A24DC8273 /* ChargeIntents.swift */,
+				69238EE300AEAC6E22ED6727 /* ChargeView.swift */,
+				49D643A01B5C56616360E82B /* DashboardView.swift */,
+				7FEC7CC828570B37A896E19C /* HealthView.swift */,
+				FDD850D5EAC9A9681D4F3103 /* Notifier.swift */,
+				DD95128FE5024E3262D7B55B /* ProcessesView.swift */,
+				B2CEF701FD15671F19F52B58 /* SessionsView.swift */,
+				FB430FC51271837AC63BECF4 /* SettingsView.swift */,
+			);
+			path = VibeBattery;
+			sourceTree = "<group>";
+		};
+		46A190D2DE3BE1E9A992BA68 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C620400A3E7FF15B0A4926D7 /* SystemConfiguration.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4B1A0039A307CD4438E90D31 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				B35434FE6441A6B8C8843C5A /* VibeBattery */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		56AB3A573192C541317D6294 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				5FCD4211F1977F31FE985D92 /* VBChargeHelper */,
+				15F1AE37973735A7B51DEA10 /* VibeBattery */,
+				89DAF2083FC17830405507C7 /* VibeCLI */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		5FCD4211F1977F31FE985D92 /* VBChargeHelper */ = {
+			isa = PBXGroup;
+			children = (
+				4ADE431B8D94C975301BF43C /* main.swift */,
+			);
+			path = VBChargeHelper;
+			sourceTree = "<group>";
+		};
+		6722B4487678404A97C0D460 = {
+			isa = PBXGroup;
+			children = (
+				4B1A0039A307CD4438E90D31 /* Packages */,
+				CAA360D2F23924747B2A67BE /* scripts */,
+				56AB3A573192C541317D6294 /* Sources */,
+				46A190D2DE3BE1E9A992BA68 /* Frameworks */,
+				C8D414013A9299E11BB59CF7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		89DAF2083FC17830405507C7 /* VibeCLI */ = {
+			isa = PBXGroup;
+			children = (
+				7E5647D6A28B0D5FA1C64B04 /* ChildCommand.swift */,
+				45B1ACBB0CFFCD6463701837 /* Main.swift */,
+				04CC1DBF4662D8142BEE1442 /* ResourceRunner.swift */,
+				38B88B180D71C8B5B11E84C3 /* SessionRunner.swift */,
+			);
+			path = VibeCLI;
+			sourceTree = "<group>";
+		};
+		C8D414013A9299E11BB59CF7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				582B35FC88C983331FA3E54B /* VBChargeHelper */,
+				289196878332C8951082FB3F /* vbctl */,
+				1B86C12E613BAA11B444A475 /* VibeBatteryApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CAA360D2F23924747B2A67BE /* scripts */ = {
+			isa = PBXGroup;
+			children = (
+				C44FE5D78379B6CB8BAF4402 /* install-helper.sh */,
+				E1F675D2F345E31B5B9B9C56 /* uninstall-helper.sh */,
+			);
+			path = scripts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		06F2618B09A06A733B798666 /* vbctl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5FA2B75D7F0A3BAE9E0B1508 /* Build configuration list for PBXNativeTarget "vbctl" */;
+			buildPhases = (
+				0EF3F03AAD317FE01CCC8CB0 /* Sources */,
+				D31A0F86AED22F8BEA9854E8 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = vbctl;
+			packageProductDependencies = (
+				295390D169B4E0D0F293CF3B /* BatteryCore */,
+				096866D6B92443C5CB23E175 /* BatteryPlatform */,
+				B0F5B6A27A0FD7A454BBC7E2 /* MacBridge */,
+			);
+			productName = vbctl;
+			productReference = 289196878332C8951082FB3F /* vbctl */;
+			productType = "com.apple.product-type.tool";
+		};
+		9F070D204D9F5AFB29A38E4B /* VBChargeHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B998B1C9983F85975FED11E1 /* Build configuration list for PBXNativeTarget "VBChargeHelper" */;
+			buildPhases = (
+				7C6ACB211D789619AE4ECB9C /* Sources */,
+				E6E07A47645374091D353741 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VBChargeHelper;
+			packageProductDependencies = (
+				91721846BF0F00D782E2AD9E /* BatteryCore */,
+				FBC1A1DC8559E38387C4D01D /* BatteryPlatform */,
+				C4D8B20BA79F12B2D2CE1BFC /* MacBridge */,
+			);
+			productName = VBChargeHelper;
+			productReference = 582B35FC88C983331FA3E54B /* VBChargeHelper */;
+			productType = "com.apple.product-type.tool";
+		};
+		B4D51A98BA88AB80367BD3C9 /* VibeBatteryApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B399089C0CC70E6424713F3 /* Build configuration list for PBXNativeTarget "VibeBatteryApp" */;
+			buildPhases = (
+				629A8012EB2CADDD622198FE /* Sources */,
+				C67D1CF0B74B6E732C0F8B8A /* Resources */,
+				3AE57A5E10BE5495F471C69B /* Frameworks */,
+				5B84B990E0D0629844ACE384 /* Embed Dependencies */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7B7F9A0E8BF81B39493975E3 /* PBXTargetDependency */,
+				5C988D8D98463DAFF9E8FF68 /* PBXTargetDependency */,
+			);
+			name = VibeBatteryApp;
+			packageProductDependencies = (
+				33E14DA60A9D100A6EB8F8C6 /* BatteryCore */,
+				64490999888D4D3BABB5223F /* BatteryPlatform */,
+			);
+			productName = VibeBatteryApp;
+			productReference = 1B86C12E613BAA11B444A475 /* VibeBatteryApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BD4C292459EBF759E38606D0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					06F2618B09A06A733B798666 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Manual;
+					};
+					9F070D204D9F5AFB29A38E4B = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Manual;
+					};
+					B4D51A98BA88AB80367BD3C9 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = E1C5E80745123FA20FA59894 /* Build configuration list for PBXProject "VibeBattery" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 6722B4487678404A97C0D460;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				3CD871B1BB87166252142755 /* XCLocalSwiftPackageReference "." */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = C8D414013A9299E11BB59CF7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B4D51A98BA88AB80367BD3C9 /* VibeBatteryApp */,
+				06F2618B09A06A733B798666 /* vbctl */,
+				9F070D204D9F5AFB29A38E4B /* VBChargeHelper */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C67D1CF0B74B6E732C0F8B8A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09B6A926C8358BCAF4257D62 /* install-helper.sh in Resources */,
+				02C3A468AD308533B7CC6A4F /* uninstall-helper.sh in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0EF3F03AAD317FE01CCC8CB0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A02A15628471797568E82F6B /* ChildCommand.swift in Sources */,
+				5597993BA10B64959DE1CD47 /* Main.swift in Sources */,
+				DF3A1B69639E546BBB60288B /* ResourceRunner.swift in Sources */,
+				46FE2D87BBA577B293C47118 /* SessionRunner.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		629A8012EB2CADDD622198FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				270EE45B4BA311DDA7D897FD /* App.swift in Sources */,
+				1A53EE2D512E53484C77EFBA /* AppModel.swift in Sources */,
+				7D50C5F89ADBB93CD17D1C4A /* ChargeControlView.swift in Sources */,
+				A002AB0CD85465A4916413FD /* ChargeIntents.swift in Sources */,
+				9331556D82D858C5CACDB836 /* ChargeView.swift in Sources */,
+				0A27D4A05133537F9957C8D6 /* DashboardView.swift in Sources */,
+				DE11E10BDB1CC4A3BB873CD6 /* HealthView.swift in Sources */,
+				C7C02E43FDFCEDD560F4F50A /* Notifier.swift in Sources */,
+				614932E0AE1873D851DF2807 /* ProcessesView.swift in Sources */,
+				1B989C71F81739E96BAF9E1D /* SessionsView.swift in Sources */,
+				8C4B0290C57DB307EB2C1971 /* SettingsView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7C6ACB211D789619AE4ECB9C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B0CBDB6427FDC01CA52E0F7 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5C988D8D98463DAFF9E8FF68 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9F070D204D9F5AFB29A38E4B /* VBChargeHelper */;
+			targetProxy = CED96D5837395EE4FCF1A35B /* PBXContainerItemProxy */;
+		};
+		7B7F9A0E8BF81B39493975E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 06F2618B09A06A733B798666 /* vbctl */;
+			targetProxy = A687E784C99BCF59A5A925C3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		365938915025B6712EDA38C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_APP_SANDBOX = NO;
+				INFOPLIST_FILE = Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.y-minion.vibebattery";
+				PRODUCT_NAME = VibeBattery;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		5665A558CCE3B4F98B3E236E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.y-minion.vibebattery.vbctl";
+				PRODUCT_NAME = vbctl;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		5B3FDB588D1111C442C29BED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 0.1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		7507DD80D30FC0037CBA6FFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 0.1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		947B372B34BFEA629AFB1307 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.y-minion.vibebattery.helper";
+				PRODUCT_NAME = VBChargeHelper;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		AFA04322977D19FDDD4AE40F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.y-minion.vibebattery.helper";
+				PRODUCT_NAME = VBChargeHelper;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		B1AA7153C67CFBE5B187EE7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.y-minion.vibebattery.vbctl";
+				PRODUCT_NAME = vbctl;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		BA331B81D4C6EBFFDD692AFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_APP_SANDBOX = NO;
+				INFOPLIST_FILE = Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.y-minion.vibebattery";
+				PRODUCT_NAME = VibeBattery;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5FA2B75D7F0A3BAE9E0B1508 /* Build configuration list for PBXNativeTarget "vbctl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1AA7153C67CFBE5B187EE7A /* Debug */,
+				5665A558CCE3B4F98B3E236E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7B399089C0CC70E6424713F3 /* Build configuration list for PBXNativeTarget "VibeBatteryApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA331B81D4C6EBFFDD692AFB /* Debug */,
+				365938915025B6712EDA38C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B998B1C9983F85975FED11E1 /* Build configuration list for PBXNativeTarget "VBChargeHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFA04322977D19FDDD4AE40F /* Debug */,
+				947B372B34BFEA629AFB1307 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E1C5E80745123FA20FA59894 /* Build configuration list for PBXProject "VibeBattery" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7507DD80D30FC0037CBA6FFE /* Debug */,
+				5B3FDB588D1111C442C29BED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		3CD871B1BB87166252142755 /* XCLocalSwiftPackageReference "." */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = .;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		096866D6B92443C5CB23E175 /* BatteryPlatform */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = BatteryPlatform;
+		};
+		295390D169B4E0D0F293CF3B /* BatteryCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = BatteryCore;
+		};
+		33E14DA60A9D100A6EB8F8C6 /* BatteryCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = BatteryCore;
+		};
+		64490999888D4D3BABB5223F /* BatteryPlatform */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = BatteryPlatform;
+		};
+		91721846BF0F00D782E2AD9E /* BatteryCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = BatteryCore;
+		};
+		B0F5B6A27A0FD7A454BBC7E2 /* MacBridge */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MacBridge;
+		};
+		C4D8B20BA79F12B2D2CE1BFC /* MacBridge */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MacBridge;
+		};
+		FBC1A1DC8559E38387C4D01D /* BatteryPlatform */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = BatteryPlatform;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = BD4C292459EBF759E38606D0 /* Project object */;
+}

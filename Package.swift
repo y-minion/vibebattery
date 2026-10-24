@@ -5,7 +5,8 @@ let package = Package(name: "VibeBattery", platforms: [.macOS("15.0")], products
     .executable(name: "vbctl", targets: ["VibeCLI"]),
     .executable(name: "VBChargeHelper", targets: ["VBChargeHelper"]),
     .library(name: "BatteryCore", targets: ["BatteryCore"]),
-    .library(name: "BatteryPlatform", targets: ["BatteryPlatform"])
+    .library(name: "BatteryPlatform", targets: ["BatteryPlatform"]),
+    .library(name: "MacBridge", targets: ["MacBridge"])
 ], targets: [
     .target(name: "BatteryCore"),
     .target(name: "MacBridge", linkerSettings: [.linkedLibrary("proc"), .linkedFramework("Foundation")]),

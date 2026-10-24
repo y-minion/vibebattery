@@ -5,6 +5,12 @@ import ServiceManagement
 import BatteryCore
 import BatteryPlatform
 @MainActor final class AppModel: ObservableObject {
+    /// The one model, shared by the SwiftUI app and Shortcuts actions (which may launch the app in the background).
+    static let shared=AppModel()
+    func shortcutStatus() -> ShortcutStatus {
+        battery=BatteryReader.read();refreshCharge()
+        return ShortcutStatus.make(battery,limit:charge)
+    }
     @Published var battery=BatterySnapshot()
     @Published var history:[BatterySnapshot]=[]
     @Published var processes:[ProcessSample]=[]
@@ -82,9 +88,9 @@ import BatteryPlatform
     static func chargeMessage(_ c:ChargeCommand,_ s:ChargeLimitState) -> String {
         c == .startTopUp ? "한 번 완충을 요청했습니다. 원래 상한으로 돌아가는 시점은 macOS가 정합니다.":"적용을 확인했습니다. \(ChargeText.limit(s))"
     }
-    /// A `vbctl charge` request; the app applies it like a user change and logs it as the command line's.
-    private func handleControl(_ c:ChargeCommand) -> ControlResponse {
-        switch chargeController.apply(c,source:.cli) {
+    /// A request from vbctl or Shortcuts; applied like a user change and logged with its source.
+    func perform(_ c:ChargeCommand,source:ChargeWrite.Source) -> ControlResponse {
+        switch chargeController.apply(c,source:source) {
         case .success(let s):charge=s;return ControlResponse(ok:true,message:Self.chargeMessage(c,s),state:s)
         case .failure(let e):
             if c.requiresHelper { checkHelper() }
@@ -94,7 +100,7 @@ import BatteryPlatform
     private func startControlServer() {
         try? FileManager.default.createDirectory(at:AppPaths.directory,withIntermediateDirectories:true,attributes:[.posixPermissions:0o700])
         let server=ControlServer(path:AppPaths.controlSocket) { [weak self] c in
-            MainActor.assumeIsolated { self?.handleControl(c) ?? ControlResponse(ok:false,message:"앱을 사용할 수 없습니다.",state:nil) }
+            MainActor.assumeIsolated { self?.perform(c,source:.cli) ?? ControlResponse(ok:false,message:"앱을 사용할 수 없습니다.",state:nil) }
         }
         // Without the channel only vbctl writes are unavailable; the app itself keeps working.
         do { try server.start();controlServer=server } catch { controlServer=nil }
